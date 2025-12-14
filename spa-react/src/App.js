@@ -1,19 +1,36 @@
 import React, { useState } from 'react'
 import { useState } from 'react';
-export default function App() {
+import Navbar from './components/Navbar';
+import PostsList from './components/PostList';
+import Modal from './components/Modal';
 
-  let [count,setCount] = useState(0);
+function App() {
+  //working with list
+  let [posts,setPost]=useState([
+    {id:1,title:"Post 1"},
+    {id:2,title:"Post 2"},
+    {id:3,title:"Post 3"},
+  ]);
 
-  let increment = () => {
-    setCount((prevState)=>prevState+1)
-  }
+  let [showModal,setShowModal] = useState(false);
 
+
+  
   return (
-    <div>
-      <h1>Counter</h1>
-      <h3>Count - {count}</h3>
-      <button onClick={increment}>increments</button>
-    
-    </div>
-  )
+    <>
+      <Navbar setShowModal={setShowModal}/>
+      <PostsList posts={posts}/>
+      {/* <Modal> */}
+        {/* modal content */}
+        {/* <h1>Zoom class is available now.</h1>
+        <p>feel free to <a href='www.youtube.com'>Join</a> here </p> */}
+      {/* </Modal> */}
+
+    {showModal &&  <Modal>
+        <h1>Term and Condition</h1>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque distinctio repudiandae dolorum laudantium veniam nihil minima quo doloremque sapiente excepturi tempora culpa in, illum eum voluptas, quod ipsam! Quibusdam, incidunt. </p>
+        <button onClick={()=>setShowModal(false)}>Close</button>
+      </Modal>}
+    </>  //it called react fragment
+  );
 }
