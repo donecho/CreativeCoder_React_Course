@@ -20,6 +20,10 @@ function App() {
     {id:2,title:"Post 2"},
     {id:3,title:"Post 3"},
   ]);
+
+  let deletePost = (id) =>{
+    setPost((prevState)=>prevState.filter(post=>post.id!==id))
+  }
   
   return (
     <div className='app'>
@@ -29,7 +33,11 @@ function App() {
       <h1>List of Posts</h1>
       <ul>
         {post.map((post)=>(
-          <li key={post.id}>{post.title}</li>
+          <li 
+            key={post.id}>{post.title} 
+            <button onClick={()=>deletePost(post.id)}> Delete Post </button>
+          
+          </li>
         ))}
       </ul>
     </div>
