@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import PostsList from './components/PostList';
+import Modal from './components/Modal';
 
 function App() {
 
@@ -20,6 +21,11 @@ function App() {
     <>
       <Navbar/>
       <PostsList posts={posts}/>
+      <Modal>
+        {/* modal content */}
+        <h1>Zoom class is available now.</h1>
+        <p>feel free to <a href=''>Join</a> here </p>
+      </Modal>
     </>  //it called react fragment
   );
 }
