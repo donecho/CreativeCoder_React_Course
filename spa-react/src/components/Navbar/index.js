@@ -3,7 +3,7 @@ import './index.css'
 
 export default function Navbar({setShowModal}) {
   return (
-    <nav>
+    <nav className='nav-container'>
         <div className='container'>
             <h1>logo</h1>
             <ul>

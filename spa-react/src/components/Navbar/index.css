@@ -1,9 +1,9 @@
-nav{
+.nav-container {
     background-color: yellow;
     padding: 10px;
 }
 
-.container {
+.nav-container .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,11 +11,11 @@ nav{
     margin:auto;
 }
 
-.container ul{
+.nav-container .container ul{
     display: flex;
 }
 
-.container li{
+.nav-container .container li{
     list-style-type: none;
     margin: 0 20px;
 }

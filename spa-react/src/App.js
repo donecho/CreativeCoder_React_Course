@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import PostsList from './components/PostList';
@@ -26,7 +26,7 @@ function App() {
         <p>feel free to <a href='www.youtube.com'>Join</a> here </p> */}
       {/* </Modal> */}
 
-    {showModal &&  <Modal>
+    {showModal &&  <Modal danger>
         <h1>Term and Condition</h1>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque distinctio repudiandae dolorum laudantium veniam nihil minima quo doloremque sapiente excepturi tempora culpa in, illum eum voluptas, quod ipsam! Quibusdam, incidunt. </p>
         <button onClick={()=>setShowModal(false)}>Close</button>
@@ -34,3 +34,5 @@ function App() {
     </>  //it called react fragment
   );
 }
+
+export default App;
