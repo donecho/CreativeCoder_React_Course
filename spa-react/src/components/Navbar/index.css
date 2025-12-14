@@ -1,15 +1,10 @@
 .nav-container {
-    background-color: yellow;
     padding: 10px;
+    background-color: gray;
+    color:white;
 }
 
-.nav-container .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin:auto;
-}
+
 
 .nav-container .container ul{
     display: flex;
