@@ -1,47 +1,26 @@
 // import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import QAImage from './assets/image/image_1.png';
-
+import Navbar from './components/Navbar';
+import PostsList from './components/PostList';
 
 function App() {
 
-  // let name = "Zin Phyo Thant";
-  let [name,setName]=useState("Zin Phyo Thant"); //[getElementError,setter]
-  
-  let changeName= ()=>{
-    setName("Aung Aung");
-    console.log(name);
-  };
 
   //working with list
-  let [post,setPost]=useState([
+  let [posts,setPost]=useState([
     {id:1,title:"Post 1"},
     {id:2,title:"Post 2"},
     {id:3,title:"Post 3"},
   ]);
 
-  let deletePost = (id) =>{
-    setPost((prevState)=>prevState.filter(post=>post.id!==id))
-  }
+
   
   return (
-    <div className='app'>
-      <h1>Hello World {name}</h1>
-      <button onClick={changeName}>Click to change name</button>
-
-      <h1>List of Posts</h1>
-      <ul>
-        {!!post.length && post.map((post)=>(
-          <li 
-            key={post.id}>{post.title} 
-            <button onClick={()=>deletePost(post.id)}> Delete Post </button>
-          
-          </li>
-        ))} 
-        {!post.length && <p>There is no post</p>}
-      </ul>
-    </div>
+    <>
+      <Navbar/>
+      <PostsList posts={posts}/>
+    </>  //it called react fragment
   );
 }
 
