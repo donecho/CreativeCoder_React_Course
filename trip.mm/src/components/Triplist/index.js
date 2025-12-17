@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 export default function Index() {
 
@@ -6,13 +6,18 @@ export default function Index() {
 
     let [url,setUrl] = useState('http://localhost:3001/trips');
 
+   let fetchTrips = useCallback(()=>
+    {
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            setTrips(data);
+        })
+    },[url])
+
 useEffect(()=>{
-    fetch(url)
-    .then(res => res.json())
-    .then(data => {
-        setTrips(data);
-    })
-},[url])
+    fetchTrips()
+},[fetchTrips])
 
  console.log(trips);
 
