@@ -3,7 +3,7 @@ import './index.css'
 import ReactDom from 'react-dom';
 
 
-export default function Modal({children,danger}) {
+export default function Modal({children,danger, setShowModal}) {
   let className = danger ? 'border-red':'border-blue';
   return (
     ReactDom.createPortal(
@@ -11,6 +11,7 @@ export default function Modal({children,danger}) {
       <div className='modal-backdrop'>
         <div className={`modal ${className}`}>
           {children}
+           <button onClick={()=>setShowModal(false)}>Close</button>
         </div>
       </div>
     </div>
