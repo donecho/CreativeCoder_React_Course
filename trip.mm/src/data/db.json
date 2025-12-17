@@ -1,16 +1,19 @@
 {
     "trips" : [
         {
-            "name" :"2 nignts in Chaung Tha",
+            "id":1,
+            "name" :"1 nignts in Chaung Tha",
             "price": 100000
         },
          {
+             "id":2,
             "name" :"2 nignts in Kalaw",
-            "price": 100000
+            "price": 200000
         },
          {
-            "name" :"2 nignts in Ngapali",
-            "price": 100000
+             "id":3,
+            "name" :"3 nignts in Ngapali",
+            "price": 300000
         }
     ]
 }
