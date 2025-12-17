@@ -3,17 +3,21 @@
         {
             "id":1,
             "name" :"1 nignts in Chaung Tha",
-            "price": 100000
+            "price": 100000,
+            "location": "Myanmar"
         },
          {
              "id":2,
-            "name" :"2 nignts in Kalaw",
-            "price": 200000
+            "name" :"2 nignts in Paris",
+            "price": 200000,
+            "location": "Paris"
         },
          {
              "id":3,
             "name" :"3 nignts in Ngapali",
-            "price": 300000
+            "price": 300000,
+            "location": "Myanmar"
+
         }
     ]
 }
