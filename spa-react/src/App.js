@@ -7,7 +7,7 @@ import Modal from './components/Modal/index';
 
 function App() {
   //working with list
-  let [posts,setPost]=useState([
+  let [posts,setPosts]=useState([
     {id:1,title:"Post 1"},
     {id:2,title:"Post 2"},
     {id:3,title:"Post 3"},
@@ -15,7 +15,10 @@ function App() {
 
   let [showModal,setShowModal] = useState(false);
 
-
+  let addPost =(post)=>{
+    setPosts(prevState=>[...prevState,post])
+    setShowModal(false);
+  }
   
   return (
     <>
@@ -28,7 +31,7 @@ function App() {
       {/* </Modal> */}
 
     {showModal &&  <Modal setShowModal={setShowModal}>
-       <PostForm/>
+       <PostForm addPost={addPost}/>
       </Modal>}
     </>  //it called react fragment
   );
