@@ -8,9 +8,8 @@ import Modal from './components/Modal/index';
 function App() {
   //working with list
   let [posts,setPosts]=useState([
-    {id:1,title:"Post 1"},
-    {id:2,title:"Post 2"},
-    {id:3,title:"Post 3"},
+    {id:1,title:"Post 1",status:'upcoming'},
+    {id:2,title:"Post 2",status:'dropped'},
   ]);
 
   let [showModal,setShowModal] = useState(false);
