@@ -15,3 +15,17 @@ function App() {
 }
 
 export default App;
+
+/**
+ * **Primitive
+ * string
+ * number
+ * boolean
+ * null
+ * undefined
+ * 
+ * **Refrence
+ * object
+ * array 
+ * function
+ */
