@@ -1,0 +1,14 @@
+{
+    "todos": [
+        {
+            "id":1,
+            "title": "My First Tod",
+            "completed": false
+        },
+        {
+            "id":2,
+            "title": "My Second Tod",
+            "completed": false
+        }
+    ]
+}
